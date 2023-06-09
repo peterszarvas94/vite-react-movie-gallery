@@ -26,7 +26,7 @@ export default function Form({ defaultValues, backLink, onSubmit }: Props) {
         placeholder="Description"
       />
 
-      <div className="flex gap-4 h-fit items-end">
+      <div className="flex h-fit flex-col items-center gap-6 sm:flex-row">
         <div className="grow flex flex-col gap-2">
           <label className="text-primary font-body" htmlFor="ageRating">Age rating</label>
           <Controller
@@ -39,18 +39,20 @@ export default function Form({ defaultValues, backLink, onSubmit }: Props) {
             )}
           />
         </div>
-        <button
-          className="bg-white border-[1px] border-primary p-3 shadow-weak shadow-btn-primary text-primary font-body flex items-center gap-2 h-fit"
-          onClick={() => setRoute(backLink)}
-        >
-          <AiOutlineUnorderedList />
-          <span>Back</span>
-        </button>
-        <button type="submit"
-          className="border-[1px] border-primary p-3 shadow-weak shadow-primary text-primary font-body bg-white w-fit h-fit"
-        >
-          Save
-        </button>
+        <div className="flex gap-4">
+          <button
+            className="bg-white border-[1px] border-primary p-3 shadow-weak shadow-btn-primary text-primary font-body flex items-center gap-2 h-fit"
+            onClick={() => setRoute(backLink)}
+          >
+            <AiOutlineUnorderedList />
+            <span>Back</span>
+          </button>
+          <button type="submit"
+            className="border-[1px] border-primary p-3 shadow-weak shadow-primary text-primary font-body bg-white w-fit h-fit"
+          >
+            Save
+          </button>
+        </div>
       </div>
     </form>
   );
