@@ -1,6 +1,6 @@
 import type { Input, Movie } from "../utils/types";
 import { useContext } from "react";
-import { AppContext } from "./AppContext";
+import { AppContext } from "../utils/AppContext";
 import Form from "./Form";
 
 interface Props {
